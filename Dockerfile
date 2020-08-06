@@ -23,6 +23,7 @@ RUN apt-get upgrade -qy && apt-get install -qy \
     && wget -q http://download.twonky.com/8.5.1/twonky-x86-64-glibc-2.22-8.5.1.zip -O /tmp/twonkyserver.zip \
     && mkdir -p /usr/local/twonky \
     && unzip -d /usr/local/twonky -o /tmp/twonkyserver.zip \
+    && echo 'disable_dmr_plugins=1' >> /usr/local/twonky/twonkyserver-default.ini \
     && rm -f /tmp/twonkyserver.zip \
     && chmod -R +x /usr/local/twonky \
     && chown -R root:users /config \
