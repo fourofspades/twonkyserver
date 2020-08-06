@@ -24,6 +24,7 @@ RUN apt-get upgrade -qy && apt-get install -qy \
     && mkdir -p /usr/local/twonky \
     && unzip -d /usr/local/twonky -o /tmp/twonkyserver.zip \
     && echo 'disable_dmr_plugins=3' >> /usr/local/twonky/twonkyserver-default.ini \
+    && echo 'disablesleepmode=0' >> /usr/local/twonky/twonkyserver-default.ini \ 
     && rm -f /tmp/twonkyserver.zip \
     && chmod -R +x /usr/local/twonky \
     && chown -R root:users /config \
