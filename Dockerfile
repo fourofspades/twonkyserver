@@ -25,6 +25,8 @@ RUN apt-get upgrade -qy && apt-get install -qy \
     && unzip -d /usr/local/twonky -o /tmp/twonkyserver.zip \
     && echo 'disable_dmr_plugins=3' >> /usr/local/twonky/twonkyserver-default.ini \
     && echo 'disablesleepmode=0' >> /usr/local/twonky/twonkyserver-default.ini \
+	&& echo 'ssdp_beat_time=3620' >> /usr/local/twonky/twonkyserver-default.ini \
+	&& echo 'ssdpheartbeattimeout=400' >> /usr/local/twonky/twonkyserver-default.ini \
     && sed -i 's/RECYCLE.BIN/RECYCLE.BIN,@eaDir,#recycle/g' /usr/local/twonky/twonkyserver-default.ini \
     && rm -f /tmp/twonkyserver.zip \
     && chmod -R +x /usr/local/twonky \
