@@ -1,4 +1,4 @@
-![Docker Pulls](https://img.shields.io/docker/pulls/dtjs48jkt/twonkyserver?style=plastic) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/H2CK/twonkyserver?style=plastic)
+![Docker Pulls](https://img.shields.io/docker/pulls/mgillespie/twonkyserver_lynx?style=plastic) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/fourofspades/twonkyserver?style=plastic)
 # docker-twonkyserver
 [TwonkyMedia server (TMS)](http://twonky.com/) is DLNA-compliant UPnP AV server software from PacketVideo. It runs on Linux, Mac OS X, Windows XP, Windows Vista, Windows Home Server, and Windows 7 computers as well as Android, iOS, and other mobile platforms. TwonkyMedia server can be used to share and stream media to most UPnP AV or DLNA-compliant clients, in addition to non-UPnP devices through the HTML, RSS, and JSON supported front ends.
 There are two docker images:
@@ -13,7 +13,7 @@ You will need a valid licence to run the TwonkyMedia server inside this docker i
 ## Usage - Docker CLI
 
 ```
-docker run -d --net=host --name=twonkyserver -v /path/to/config:/config:rw -v /path/to/data:/data:ro -v /etc/localtime:/etc/localtime:ro dtjs48jkt/twonkyserver
+docker run -d --net=host --name=twonkyserver -v /path/to/config:/config:rw -v /path/to/data:/data:ro -v /etc/localtime:/etc/localtime:ro mgillespie/twonkyserver_lynx
 ```
 
 After starting the docker container go to:
