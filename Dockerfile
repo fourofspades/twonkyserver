@@ -14,6 +14,9 @@ RUN apt-get upgrade -qy && apt-get install -qy \
     supervisor \
     ssl-cert \
     wget \
+	nano\nano
+	net-tools\
+	less\
     unzip \
     xz-utils \
     sudo \
@@ -24,6 +27,8 @@ RUN apt-get upgrade -qy && apt-get install -qy \
     && unzip -d /usr/local/twonky -o /tmp/twonkyserver.zip \
     && echo 'disable_dmr_plugins=3' >> /usr/local/twonky/twonkyserver-default.ini \
     && echo 'disablesleepmode=0' >> /usr/local/twonky/twonkyserver-default.ini \
+	&& echo 'iface=eth0' >> /usr/local/twonky/twonkyserver-default.ini \
+	&& echo 'ignoreiface=eth1,docker0,ppp200' >> /usr/local/twonky/twonkyserver-default.ini \
 	&& echo 'ssdp_beat_time=3620' >> /usr/local/twonky/twonkyserver-default.ini \
 	&& echo 'ssdpheartbeattimeout=400' >> /usr/local/twonky/twonkyserver-default.ini \
     && sed -i 's/RECYCLE.BIN/RECYCLE.BIN,@eaDir,#recycle/g' /usr/local/twonky/twonkyserver-default.ini \
